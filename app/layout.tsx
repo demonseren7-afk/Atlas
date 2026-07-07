@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Atlas",
-  description: "AI Fitness Decision System MVP",
+  description: "Atlas 是你的 AI 身体成长伙伴",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <body>
         <Nav />
         {children}

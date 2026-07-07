@@ -24,22 +24,22 @@ export function getSafeDefaultWorkout(): AtlasCoachResponse {
       training_strategy: "deload"
     },
     workout: {
-      day_type: "recovery",
+      day_type: "恢复训练",
       exercises: [
         {
-          name: "Mobility Flow",
+          name: "全身灵活性唤醒",
           sets: 2,
-          reps: "8-10 minutes",
+          reps: "8-10 分钟",
           rest_seconds: 60
         },
         {
-          name: "Easy Zone 2 Walk",
+          name: "轻松有氧步行",
           sets: 1,
-          reps: "20 minutes",
+          reps: "20 分钟",
           rest_seconds: 0
         }
       ],
-      coach_note: "Fallback plan: use a conservative recovery session because AI output was unavailable or invalid."
+      coach_note: "今天先用保守的恢复训练保护状态。等输出恢复正常后，Atlas 会继续为你安排更精确的训练。"
     }
   };
 }

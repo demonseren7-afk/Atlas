@@ -58,6 +58,12 @@ main {
   padding: 20px;
 }
 
+.panel + .panel,
+.companion-style-note + .panel,
+.companion-style-note + .metric-grid {
+  margin-top: 16px;
+}
+
 .grid {
   display: grid;
   gap: 12px;
@@ -94,4 +100,103 @@ main {
 
 .list li {
   margin: 10px 0;
+}
+
+.companion-panel {
+  margin-top: 16px;
+}
+
+.companion-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.companion-header h2 {
+  margin: 0 0 8px;
+}
+
+.companion-header p,
+.companion-note,
+.companion-style-note p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.companion-header span {
+  align-self: flex-start;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #374151;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.preference-group {
+  margin: 20px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.preference-group legend {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.preference-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.preference-option {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.preference-option input {
+  margin-top: 3px;
+}
+
+.preference-option span,
+.preference-option small {
+  display: block;
+}
+
+.preference-option small {
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.companion-note {
+  margin-top: 20px;
+}
+
+.companion-style-note {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.companion-style-note a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.companion-soft {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.companion-bright {
+  background: #eff6ff;
+  border-color: #bfdbfe;
 }

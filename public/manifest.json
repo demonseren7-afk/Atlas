@@ -1,7 +1,7 @@
 {
   "name": "Atlas",
   "short_name": "Atlas",
-  "description": "AI Fitness Decision System for daily workout and nutrition guidance.",
+  "description": "Atlas 是你的 AI 身体成长伙伴，每天陪你做更适合自己的训练和饮食选择。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

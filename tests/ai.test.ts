@@ -32,9 +32,10 @@ const validLLMResponse: AtlasCoachResponse = {
 };
 
 test("atlasCoachSystemPrompt enforces JSON-only coach output", () => {
-  assert.match(atlasCoachSystemPrompt, /elite AI fitness coach/);
+  assert.match(atlasCoachSystemPrompt, /AI body growth companion/);
   assert.match(atlasCoachSystemPrompt, /Always prioritize safety/);
   assert.match(atlasCoachSystemPrompt, /Never output non-JSON text/);
+  assert.match(atlasCoachSystemPrompt, /Simplified Chinese/);
   assert.match(atlasCoachSystemPrompt, /STRICT JSON/);
 });
 
@@ -43,7 +44,7 @@ test("buildWorkoutPrompt includes user profile and optional history inputs", () 
     { performance_delta: 0.1, fatigue: 0.4 }
   ]);
 
-  assert.match(prompt, /Atlas Coach/);
+  assert.match(prompt, /AI body growth companion/);
   assert.match(prompt, /lean muscle/);
   assert.match(prompt, /L2/);
   assert.match(prompt, /medium/);
@@ -51,6 +52,7 @@ test("buildWorkoutPrompt includes user profile and optional history inputs", () 
   assert.match(prompt, /performance_delta/);
   assert.match(prompt, /decision/);
   assert.match(prompt, /workout/);
+  assert.match(prompt, /Simplified Chinese/);
 });
 
 test("parseLLMResponse returns valid strict JSON responses", () => {
@@ -69,7 +71,7 @@ test("parseLLMResponse falls back to a safe workout for invalid JSON", () => {
   const parsed = parseLLMResponse("not-json");
 
   assert.equal(parsed.decision.training_strategy, "deload");
-  assert.equal(parsed.workout.day_type, "recovery");
+  assert.equal(parsed.workout.day_type, "恢复训练");
   assert.ok(parsed.workout.exercises.length > 0);
 });
 
@@ -95,7 +97,7 @@ test("callLLM returns safe fallback when API request fails", async () => {
   });
 
   assert.equal(parsed.decision.training_strategy, "deload");
-  assert.equal(parsed.workout.day_type, "recovery");
+  assert.equal(parsed.workout.day_type, "恢复训练");
 });
 
 test("runAtlasWorkoutEngine returns LLM decision and workout contract", async () => {

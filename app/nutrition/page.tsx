@@ -1,3 +1,4 @@
+import { CompanionStyleNote } from "../../components/CompanionPreferences";
 import { generateNutrition } from "../../lib/ai/nutritionPrompt";
 import { mockUserProfile } from "../../lib/mockUserProfile";
 
@@ -6,23 +7,24 @@ export default function NutritionPage() {
 
   return (
     <main>
-      <h1 className="page-title">Nutrition</h1>
-      <p className="page-copy">Static AI-placeholder nutrition target for the mock profile.</p>
-      <section className="metric-grid" aria-label="Daily nutrition targets">
+      <h1 className="page-title">饮食计划</h1>
+      <p className="page-copy">这是 Atlas 基于当前身体档案给出的今日饮食目标。</p>
+      <CompanionStyleNote context="nutrition" />
+      <section className="metric-grid" aria-label="每日饮食目标">
         <div className="metric">
-          <span>Calories</span>
-          <strong>{nutrition.calories}</strong>
+          <span>热量</span>
+          <strong>{nutrition.calories} 千卡</strong>
         </div>
         <div className="metric">
-          <span>Protein</span>
+          <span>蛋白质</span>
           <strong>{nutrition.protein}g</strong>
         </div>
         <div className="metric">
-          <span>Carbs</span>
+          <span>碳水</span>
           <strong>{nutrition.carbs}g</strong>
         </div>
         <div className="metric">
-          <span>Fat</span>
+          <span>脂肪</span>
           <strong>{nutrition.fat}g</strong>
         </div>
       </section>

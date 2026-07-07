@@ -6,10 +6,11 @@ export function buildWorkoutPrompt(
   history: TrainingHistoryEntry[] = []
 ): string {
   return [
-    "You are Atlas Coach, an AI fitness decision system.",
+    "You are Atlas, an AI body growth companion.",
     "Analyze the user profile and optional history, decide training strategy, then generate the workout.",
     `UserProfile: ${JSON.stringify(userProfile)}.`,
     `History: ${JSON.stringify(history)}.`,
-    "Return strict JSON with decision and workout keys."
+    "Return strict JSON with decision and workout keys.",
+    "All user-facing workout content must be natural Simplified Chinese."
   ].join(" ");
 }
